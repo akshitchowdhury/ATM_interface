@@ -29,8 +29,11 @@ public class Welcomedisplay {
 		 * System.out.println("5. Change ATM pin number. ");
 		 * System.out.println("6. Type 'exit'to Exit the interface. ");
 		 */
-	String arr[] = {"1. Create new account.", "2. Display Balance.","3. Withdraw Money","4. Transfer Money to guest account.",
-			"5. Change ATM pin number. ", "6. Type 'exit'to Exit the interface. "
+	String arr[] = {"1. Create new account.", "2. Display Balance.",
+			"3. Withdraw Money","4. Deposit Money ",
+			"5. Transfer Money to guest account.",
+			"6. Change ATM pin number. ", 
+			"7. Type 'exit'to Exit the interface. "
 	} ;
 	
 	for (int i = 0; i< arr.length; i++) {

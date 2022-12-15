@@ -1,6 +1,7 @@
 package com.Driveratm;
 
 import com.balance_chk.Balance;
+import com.balance_chk.Deposit_driver;
 import com.create_acc.Account;
 import com.wcmsg.Welcomedisplay;
 import java.util.Scanner;
@@ -13,7 +14,7 @@ public class Driver {
 		
 		Account ac = new Account();
 		Balance blnc = new Balance();
-		
+		Deposit_driver dd = new Deposit_driver();
 		Welcomedisplay wc = new Welcomedisplay();
 		wc.display();
 		
@@ -37,6 +38,13 @@ public class Driver {
 			blnc.ac_verifier();
 		}
 		break;
+		
+		case "3" :{
+			System.out.println("Welcome to the Cash deposit interface : ");
+			dd.main(args);
+			break;
+			
+		}
 		
 		case "exit"  : 
 				System.out.println("You have chosen to exit the interface. "); 
