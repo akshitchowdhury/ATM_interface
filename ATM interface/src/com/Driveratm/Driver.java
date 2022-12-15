@@ -11,7 +11,7 @@ public class Driver {
 		// TODO Auto-generated method stub
 
 		Scanner sn = new Scanner(System.in);
-		
+		Driver dr = new Driver();
 		Account ac = new Account();
 		Balance blnc = new Balance();
 		Deposit_driver dd = new Deposit_driver();
@@ -29,22 +29,33 @@ public class Driver {
 			
 			ac.sysout();
 			ac.credentials();
-			
+			dr.main(args);
+			break;
 		}
 		
 		
 		
 		case "2": {
 			blnc.ac_verifier();
+			wc.lists();
+			dr.main(args);
+			break;
+		
 		}
-		break;
+		
 		
 		case "3" :{
 			System.out.println("Welcome to the Cash deposit interface : ");
 			dd.main(args);
+			
+			wc.lists();
+			dr.main(args);
 			break;
 			
+			
 		}
+		
+		
 		
 		case "exit"  : 
 				System.out.println("You have chosen to exit the interface. "); 
