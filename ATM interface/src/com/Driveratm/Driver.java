@@ -4,6 +4,8 @@ import com.balance_chk.Balance;
 import com.balance_chk.Deposit_driver;
 import com.create_acc.Account;
 import com.wcmsg.Welcomedisplay;
+import com.withdraw.Withdrawal;
+
 import java.util.Scanner;
 public class Driver {
 
@@ -16,6 +18,7 @@ public class Driver {
 		Balance blnc = new Balance();
 		Deposit_driver dd = new Deposit_driver();
 		Welcomedisplay wc = new Welcomedisplay();
+		Withdrawal wd = new Withdrawal();
 		wc.display();
 		
 		System.out.println("What services would you like to avail from below : ");
@@ -37,7 +40,8 @@ public class Driver {
 		
 		case "2": {
 			blnc.ac_verifier();
-			wc.lists();
+			blnc.display_blnc();
+			
 			dr.main(args);
 			break;
 		
@@ -48,10 +52,17 @@ public class Driver {
 			System.out.println("Welcome to the Cash deposit interface : ");
 			dd.main(args);
 			
-			wc.lists();
-			dr.main(args);
-			break;
 			
+			dr.main(args);
+			
+			
+			
+		}
+		
+		case "4" : {
+			System.out.println("Welcome to the Cash Withdrawal interface : ");
+			wd.deduct();
+			dr.main(args);
 			
 		}
 		

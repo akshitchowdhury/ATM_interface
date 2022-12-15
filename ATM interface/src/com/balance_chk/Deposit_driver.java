@@ -9,8 +9,10 @@ import org.hibernate.cfg.Configuration;
 
 public class Deposit_driver {
 
+	public static int green;
 	public static void main(String[] args) {
-		
+		Balance left = new Balance();
+		Test tester = new Test();
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Enter the first serial entry: ");
@@ -23,12 +25,17 @@ public class Deposit_driver {
 		int sno2 = sc.nextInt();
 		
 		
-		System.out.println("Enter the amount you wan to deposit");
+		System.out.println("Enter the amount you want to deposit");
         int money2 = sc.nextInt();
 		
         
-        int totally = money+money2;
-        System.out.println("Total balance "+ totally);
+		/*
+		 * 
+		 *  System.out.println("Total balance "+ green);
+		 */
+        //green = money+money2;
+        green = tester.setTest_amnt(money2+money);
+       
         
         Configuration cfg = new Configuration();
 		cfg.configure("atm.cfg.xml");
@@ -44,7 +51,7 @@ public class Deposit_driver {
 		Deposit d2 = new Deposit();
 		d2.setSno(sno2);
 		d2.setAmount(money2);
-		d2.setTotal(totally);
+		d2.setTotal(green);
 		
 		sesh.beginTransaction();
 		sesh.save(d1);
@@ -55,7 +62,18 @@ public class Deposit_driver {
 		//sesh.close();
 		
 		
+		left.ac_verifier();
 		
+		left.display_blnc();
+		
+		
+		
+	}
+	public static int getGreen() {
+		return green;
+	}
+	public static void setGreen(int green) {
+		Deposit_driver.green = green;
 	}
 	
 	
