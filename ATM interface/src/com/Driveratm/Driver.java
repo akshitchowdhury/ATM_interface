@@ -1,7 +1,8 @@
 package com.Driveratm;
 
-import com.balance_chk.Balance;
-import com.balance_chk.Deposit_driver;
+import com.Deposit.Balance;
+import com.Deposit.Deposit_driver;
+import com.changepin.Pin;
 import com.create_acc.Account;
 import com.wcmsg.Welcomedisplay;
 import com.withdraw.Withdrawal;
@@ -19,6 +20,9 @@ public class Driver {
 		Deposit_driver dd = new Deposit_driver();
 		Welcomedisplay wc = new Welcomedisplay();
 		Withdrawal wd = new Withdrawal();
+		Pin pinner = new Pin();
+		
+		
 		wc.display();
 		
 		System.out.println("What services would you like to avail from below : ");
@@ -65,6 +69,14 @@ public class Driver {
 			dr.main(args);
 			
 		}
+		
+		case "6" :{
+			System.out.println("You have selected the Pin generator");
+			
+			pinner.change();
+			dr.main(args);
+		}
+		
 		
 		
 		

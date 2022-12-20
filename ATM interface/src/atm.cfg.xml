@@ -35,7 +35,7 @@
 <property name="current_session_context_class">thread</property>
 
 <property name="hibernate.hbm2ddl.auto">create</property>
-<mapping class="com.balance_chk.Deposit"/>
+<mapping class="com.Deposit.Deposit"/>
 
 
 

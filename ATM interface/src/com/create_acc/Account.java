@@ -5,8 +5,10 @@ import java.util.Scanner;
 public class Account {
 
 	long rnd = (long) (Math.random() * 1000 * 1000);
-	String sample = "101";
-
+	/* String sample = "101"; */
+     
+	int sample = 101;
+     	
 	/**
 	 * @param rnd
 	 * @param sample
@@ -15,7 +17,7 @@ public class Account {
 	 * @param balance
 	 */
 
-	public String ac_id = sample + rnd;
+	public String ac_id = sample+""+rnd;
 
 	private String password;
 
@@ -58,7 +60,7 @@ public class Account {
 
 	public void diplay_Cred() {
 
-		Account vis = new Account();
+		/* Account vis = new Account(); */
 
 		System.out.println("Your acc no generated is : " + ac_id);
 
@@ -66,6 +68,11 @@ public class Account {
 
 	}
 
+	
+	  public String getAc_id() { return ac_id; }
+	  
+	  public void setAc_id(String ac_id) { this.ac_id = ac_id; }
+	 
 	public void credentials() {
 
 		System.out.println("Please enter your name : ");

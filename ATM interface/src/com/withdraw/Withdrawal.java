@@ -2,8 +2,8 @@ package com.withdraw;
 
 import java.util.Scanner;
 
-import com.balance_chk.Balance;
-import com.balance_chk.Deposit_driver;
+import com.Deposit.Balance;
+import com.Deposit.Deposit_driver;
 
 
 
@@ -37,8 +37,8 @@ public class Withdrawal {
 		
 		
 	}
-	public static void main(String[] args) {
-		Withdrawal wow = new Withdrawal();
-		wow.deduct();
-	}
+	/*
+	 * public static void main(String[] args) { Withdrawal wow = new Withdrawal();
+	 * wow.deduct(); }
+	 */
 }
